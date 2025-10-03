@@ -21,7 +21,7 @@
 /*Roze #ED4385;*/
 /*Zwart #0C0C0C (voor standaard tekst);*/
 /*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
-/*                                                                                 Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+/*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
 /*Grijs #7A7A7A (voor de service-tegel tekst);*/
 
 
@@ -29,45 +29,83 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
+
+li {
+    list-style: none;
+}
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
-.merriweather {
+h1 h2 h3 h4 h5 {
     font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
 }
-
-.roboto {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
 /* ------------------------------- 3. Layout --------------------------------------- */
 
+
+
+/* --------------- 3.1 Reusables ----------------------- */
 .small-inner-container {
-
-
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1200px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .medium-inner-container {
-
-
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1200px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-/* --------------- 3.1 Reusables ----------------------- */
+.button-style {
+    background-color: #ED4385;
+    border-radius: 30px;
+    /*font-family: "Roboto", sans-serif;*/
+    color: aliceblue;
+    padding: 10px 20px 10px 20px;
+}
+
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #4845E4;
+    height: 50vh;
+    color: aliceblue;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #4845E4;
+    gap: 50px;
+    padding: 10px 30px;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
