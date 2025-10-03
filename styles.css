@@ -16,6 +16,15 @@
 
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+/*Paars #5722CD;*/
+/*Blauw #4845E4;*/
+/*Roze #ED4385;*/
+/*Zwart #0C0C0C (voor standaard tekst);*/
+/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
+/*                                                                                 Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+/*Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+
 * {
     padding: 0;
     margin: 0;
@@ -42,6 +51,15 @@
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
+.small-inner-container {
+
+
+}
+
+.medium-inner-container {
+
+
+}
 
 /* --------------- 3.1 Reusables ----------------------- */
 
