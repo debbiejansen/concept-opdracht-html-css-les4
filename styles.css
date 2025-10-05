@@ -127,12 +127,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .usp-section {
     background-color: var(--light-grey);
+    padding-bottom: 100px;
 }
 
 .usp-section a {
     text-decoration: none;
     color: var(--purple);
     font-weight: 600;
+    font-variant-caps: all-small-caps;
 }
 
 .usp-content-wrapper {
@@ -160,15 +162,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 /* --------------- 4.4 Articles ------------------- */
 
 .article-section {
-    background-color: var(--blue);
+    background-color: var(--white);
 }
 
-/* --------------- 4.5 Footer ------------------- */
+.usp-article img {
+    width: 50px;
+    margin: 16px 0;
+}
+
+.usp-article h3 {
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.usp-article {
+    text-align: left;
+    flex-basis: 350px;
+    background-color: var(--white);
+    border: 1px solid var(--purple);
+    filter: drop-shadow(var(--light-grey) 1px 1px 10px);
+    padding: 30px;
+}
+
+.inner-container__article-grid {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 15px;
+    margin: 0 30px;
+    padding: 100px 25px;
+}
+
+/* --------------- 4.5 Form ------------------- */
+
+
+
+/* --------------- 4.6 Footer ------------------- */
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 14px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
