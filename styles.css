@@ -16,6 +16,7 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+
 :root {
     --blue: #4845E4;
     --grey: #7A7A7A;
@@ -25,14 +26,6 @@
     --black: #0C0C0C;
     --pink: #ED4385;
 }
-/*Paars #5722CD;*/
-/*Blauw #4845E4;*/
-/*Roze #ED4385;*/
-/*Zwart #0C0C0C (voor standaard tekst);*/
-/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
-/*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
-/*Grijs #7A7A7A (voor de service-tegel tekst);*/
-
 
 * {
     padding: 0;
@@ -56,24 +49,20 @@ button {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Merriweather", serif;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
-
-
 /* --------------- 3.1 Reusables ----------------------- */
 
 .outer-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*border: 2px solid black;*/
 }
 
-.small-inner-container {
+.inner-container {
     flex-basis: 1200px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,14 +74,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
-.usp-section {
-    background-color: var(--white);
-}
-
-.advertisement-section {
-    background-color: var(--light-grey);
-}
-
 /* --------------- 4.1 Header ------------------------- */
 
 .header-section {
@@ -100,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 
-.header-navigation{
+.header-navigation {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -124,14 +105,70 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-content-text {
     border: 2px dashed green;
-    flex-basis: 400px;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-
 }
 
+
 /* --------------- 4.2 Introduction ------------------- */
+
+.quote-section {
+    background-color: var(--white);
+}
+
+.quote-content-text {
+    display: flex;
+}
+
+
+/* --------------- 4.3 USP's ------------------- */
+
+.usp-section {
+    background-color: var(--light-grey);
+}
+
+.usp-section a {
+    text-decoration: none;
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.usp-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 15px;
+}
+
+.usp-content-text {
+    flex-basis: 400px;
+}
+
+.usp-content-image {
+    flex-basis: 300px;
+    filter: drop-shadow(grey 1px 1px 10px);
+}
+
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+
+
+
+/* --------------- 4.4 Articles ------------------- */
+
+.article-section {
+    background-color: var(--blue);
+}
+
+/* --------------- 4.5 Footer ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
