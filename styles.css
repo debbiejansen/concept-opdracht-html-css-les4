@@ -67,7 +67,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     margin: 0 30px;
-    border: 2px dashed orange;
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -103,12 +102,14 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 
-.header-content-text {
-    border: 2px dashed green;
+.inner-container__quote-header {
+    flex-basis: 200px;
     display: flex;
     flex-direction: column;
-    align-content: center;
     align-items: center;
+    text-align: center;
+    padding: 50px 50px 0 50px;
+    margin: 0 30px;
 }
 
 
@@ -116,12 +117,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .quote-section {
     background-color: var(--white);
+    text-align: center;
+    padding: 50px 0;
 }
 
-.quote-content-text {
+.quote-section h2 {
+    color: var(--purple);
+}
+
+.quote-section a {
+    text-decoration: none;
+    color: var(--purple);
+}
+
+.quote-section p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.inner-container__quote {
+    flex-basis: 650px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
 }
-
 
 /* --------------- 4.3 USP's ------------------- */
 
@@ -153,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .usp-content-image {
     flex-basis: 300px;
-    filter: drop-shadow(grey 1px 1px 10px);
+    filter: drop-shadow(0px 15px 12px #a8a8a8);
 }
 
 .reverse {
@@ -178,13 +198,19 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+.usp-article p {
+    color: var(--grey);
+    font-weight: 300;
+}
+
 .usp-article {
     text-align: left;
     flex-basis: 350px;
     background-color: var(--white);
     border: 1px solid var(--purple);
-    filter: drop-shadow(var(--light-grey) 1px 1px 10px);
-    padding: 30px;
+    filter: drop-shadow(0px 15px 12px var(--light-grey));
+    padding: 20px 30px;
+    font-size: 14px;
 }
 
 .inner-container__article-grid {
@@ -200,6 +226,61 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --------------- 4.5 Form ------------------- */
 
+.form-section {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 50px 50px;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-section button {
+    display: block;
+    margin: 20px auto 0 auto; /* centers button */
+}
+
+.form-section p {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-layout {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 12px;
+    resize: none;
+}
+
+textarea {
+    height: 15em;
+}
+
+input::placeholder,
+textarea::placeholder {
+    text-align: left;
+}
 
 
 /* --------------- 4.6 Footer ------------------- */
@@ -212,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px 0;
     background-color: var(--black);
     color: var(--white);
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
