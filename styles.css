@@ -102,6 +102,19 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 
+.header-navigation a::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--white);
+    transition: width .35s ease-in-out;
+}
+
+.header-navigation a:hover::after {
+    width: 100%;
+}
+
 .inner-container__quote-header {
     flex-basis: 200px;
     display: flex;
@@ -143,6 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 30px;
 }
 
+
 /* --------------- 4.3 USP's ------------------- */
 
 .usp-section {
@@ -155,6 +169,19 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--purple);
     font-weight: 600;
     font-variant-caps: all-small-caps;
+}
+
+.usp-content-text a::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--purple);
+    transition: width .35s ease-in-out;
+}
+
+.usp-content-text a:hover::after {
+    width: 30%;
 }
 
 .usp-content-wrapper {
@@ -307,10 +334,6 @@ textarea::placeholder {
 @media screen and (max-width: 576px) {
     .usp-content-wrapper {
         flex-direction: column-reverse;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-        padding: 50px 15px;
     }
 
     .usp-content-text {
@@ -323,4 +346,3 @@ textarea::placeholder {
     }
 
 }
-
