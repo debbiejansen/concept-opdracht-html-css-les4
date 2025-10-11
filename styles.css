@@ -175,12 +175,12 @@ h1, h2, h3, h4, h5, h6 {
     flex-basis: 600px;
     filter: drop-shadow(0px 15px 12px #a8a8a8);
 }
+
 .usp-content-image img {
     width: 100%;
     height: auto;
     object-fit: contain;
 }
-
 
 .reverse {
     display: flex;
@@ -306,12 +306,21 @@ textarea::placeholder {
 
 @media screen and (max-width: 576px) {
     .usp-content-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-content: center;
         align-items: center;
-        gap: 50px;
         padding: 50px 15px;
     }
+
+    .usp-content-text {
+        flex-basis: 220px;
+    }
+
+    .usp-content-image {
+        flex-basis: 300px;
+        filter: drop-shadow(0px 15px 12px #a8a8a8);
+    }
+
 }
 
