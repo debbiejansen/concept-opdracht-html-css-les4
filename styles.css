@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -14,18 +17,330 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+:root {
+    --blue: #4845E4;
+    --grey: #7A7A7A;
+    --light-grey: #F3F6F9;
+    --purple: #5722CD;
+    --white: #FFFFFF;
+    --black: #0C0C0C;
+    --pink: #ED4385;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+}
 
+/* ------------------------------- 3. Layout --------------------------------------- */
 /* --------------- 3.1 Reusables ----------------------- */
 
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+}
+
 /* --------------- 3.2 Other --------------------------- */
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+button {
+    background-color: var(--pink);
+    border-radius: 20px;
+    border: none;
+    color: var(--white);
+    padding: 12px 24px;
+}
+
+button:hover {
+    cursor: pointer;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+.header-section {
+    background: #4845E4;
+    background: linear-gradient(90deg,rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: var(--white);
+}
+
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 0;
+}
+
+.header-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 300px;
+    align-items: center;
+}
+
+.header-navigation a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.inner-container__quote-header {
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 50px 0 50px;
+    margin: 0 30px;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
 
+.quote-section {
+    background-color: var(--white);
+    text-align: center;
+    padding: 50px 0;
+}
+
+.quote-section h2 {
+    color: var(--purple);
+}
+
+.quote-section a {
+    text-decoration: none;
+    color: var(--purple);
+}
+
+.quote-section p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.inner-container__quote {
+    flex-basis: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+}
+
+
+/* --------------- 4.3 USP's ------------------- */
+
+.usp-section {
+    background-color: var(--light-grey);
+    padding-bottom: 100px;
+}
+
+.usp-section a {
+    text-decoration: none;
+    color: var(--purple);
+    font-weight: 600;
+    font-variant-caps: all-small-caps;
+}
+
+.usp-content-text a::after {
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--purple);
+    transition: width .35s ease-in-out;
+}
+
+.usp-content-text a:hover::after {
+    width: 20%;
+}
+
+.usp-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 15px;
+}
+
+.usp-content-text {
+    flex-basis: 300px;
+}
+
+.usp-content-image {
+    flex-basis: 600px;
+    filter: drop-shadow(0px 15px 12px #a8a8a8);
+}
+
+.usp-content-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+/* --------------- 4.4 USP Articles ------------------- */
+
+.article-section {
+    background-color: var(--white);
+}
+
+.usp-article img {
+    width: 50px;
+    margin: 16px 0;
+}
+
+.usp-article h3 {
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.usp-article p {
+    color: var(--grey);
+    font-weight: 300;
+}
+
+.usp-article {
+    text-align: left;
+    flex-basis: 350px;
+    background-color: var(--white);
+    border: 1px solid var(--purple);
+    filter: drop-shadow(0px 15px 12px var(--light-grey));
+    padding: 20px 30px;
+    font-size: 14px;
+}
+
+.inner-container__article-grid {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 15px;
+    margin: 0 30px;
+    padding: 100px 25px;
+}
+
+/* --------------- 4.5 Form ------------------- */
+
+.form-section {
+    background: #4845E4;
+    background: linear-gradient(90deg,rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: var(--white);
+    padding: 50px 50px;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-section button {
+    display: block;
+    margin: 20px auto 0 auto; /* centers button */
+}
+
+.form-section p {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-layout {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 12px;
+    resize: none;
+}
+
+textarea {
+    height: 15em;
+}
+
+input::placeholder,
+textarea::placeholder {
+    text-align: left;
+}
+
+
+/* --------------- 4.6 Footer ------------------- */
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 12px;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .usp-content-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .usp-content-text {
+        flex-basis: 220px;
+    }
+
+    .usp-content-image {
+        flex-basis: 300px;
+        filter: drop-shadow(0px 15px 12px #a8a8a8);
+    }
+}
